@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Arvo&family=Dancing+Script:wght@700&family=Festive&family=Gloria+Hallelujah&family=Josefin+Sans:ital,wght@1,500&family=Overpass:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Arvo&family=Dancing+Script:wght@700&family=Festive&family=Gloria+Hallelujah&family=Josefin+Sans:ital,wght@1,500&family=Parisienne&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  overflow: hidden;
+  cursor: url("./img/Valentine\ Heart\ Normal.cur"),auto;
+
+}
+img{
+  cursor: pointer;
+}
+
+
+// ================>> Global Style <<===============
+h1 {
+  font-size: 11vw;
+}
+
+h2 {
+  font-size: calc(1rem + 4.15vw);
+}
+
+h3 {
+  font-size: calc(1rem + 2vw);
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: calc(1rem + 0.42vw);
+}
+
+.team_fs {
+  font-size: calc(1rem + 3vw);
+  cursor: pointer;
+}
+
+a {
+  font-size: 1rem;
+}
+.same_padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.heading {
+  opacity: 0.2;
+  transition: all 0.4s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+.opacity {
+  opacity: 0.8;
+  transition: all 0.4s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+// ================>> Global Style End <<===============
+
+// ================>> Pre Loader <<================
+.preloader_box {
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 99999;
+  display: flex;
+  opacity: 1;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+.preloader_box h1 {
+  transition: all 0.1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.scale_box {
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: scale(0.8);
+}
+.hide_preloder {
+  opacity: 0;
+  height: 0;
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transform-origin: top;
+}
+
+.hide_preloder .preloader {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+// ================>> Pre Loader End <<================
+
+// ================>> Header <<================
+.header {
+  position: fixed;
+  z-index: 99;
+  h4 {
+    font-family: "Dancing Script", sans-serif;
+    font-size: calc(0.2rem + 2vw);
+  }
+  .bg_title {
+    width: 0px;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    border: 1px solid #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  }
+
+  .change_bg {
+    width: 200px;
+    opacity: 1;
+  }
+}
+// ================>> Header End <<================
+
+// ===============>> First Section <<=================
+.first_section {
+  background-image: url(./img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  background-attachment: fixed;
+  background-position: center center;
+  animation: shrink 6s infinite alternate;
+  .scale_box {
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transform: scale(0.6);
+  }
+  .main_circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    // border: 1px solid lightcyan;
+    // animation: pulse 1s linear infinite;
+  }
+}
+@keyframes shrink {
+  0% {
+    background-size: 110% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 20px rgb(13 110 253 / 50%);
+  }
+  75% {
+    box-shadow: 0px 0px 0px 30px rgb(128 0 0 / 30%);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+// ===============>> First Section End <<=================
+
+// ===============>> Second Section <<=====================
+.marquee_text {
+  white-space: nowrap;
+  word-wrap: break-word;
+  animation: move 4s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  100% {
+    transform: translate(-100%, 0%);
+  }
+}
+.img_one_move_top,
+.img_two_move_top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px solid #fff;
+  width: calc(100% - 50px);
+  margin: 60px auto 0;
+}
+
+.gallery a {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  outline: none;
+}
+
+.gallery a img {
+  height: 100%;
+  transform: scale(1, 1);
+  transition: all 300ms ease;
+}
+
+.gallery a img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.bg {
+  width: 100%;
+  background-size: 100% 100%;
+  transform: scale(1, 1);
+  transition: all 300ms ease;
+}
+
+.bg:hover {
+  transform: scale(1.1, 1.1);
+}
+// ===============>> Second Section End <<=====================
+
+// ==============>> footer <<================
+footer {
+  background-color: rgba($color: #000000, $alpha: 1);
+  .footer_title {
+    h3 {
+      font-family: "Parisienne", cursive;
+    }
+  }
+}
+.footer_button {
+  background-color: transparent;
+  position: relative;
+  color: #fff;
+  font-size: 1.6rem;
+  border: none;
+  padding: 6px 20px;
+}
+.footer_button::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 0;
+  top: 0;
+  border: 4px solid blue;
+  border-width: 4px 0 0 4px;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.footer_button::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 4px solid blue;
+  border-width: 0px 4px 4px 0px;
+  right: 0 !important;
+  bottom: 0 !important;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.footer_button:hover::before {
+  width: 60px;
+}
+.footer_button:hover::after {
+  width: 60px;
+}
+// ==============>> footer End <<================
+
+// ==============>> pop_up <<==============
+.pop_up {
+  position: fixed;
+  z-index: 100;
+  background-color: #000;
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transform-origin: bottom;
+  .valn_box{
+    height: 50vh;
+  }
+  .pop_up_button::after,.pop_up_button::before{
+    border-color: maroon;
+  }
+  h3 {
+    font-family: "Parisienne", cursive;
+    opacity: 0.8;
+  }
+  .button_box{
+    button{
+      font-size: 1rem;
+      
+    }
+  }
+  .kohi {
+    span {
+      font-size: 4rem;
+      color: rgba($color: #fff, $alpha: 0.1);
+      animation: slide 1.6s linear infinite forwards;
+    }
+  }
+  .kohi span:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .kohi span:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .kohi span:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .kohi span:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  .kohi span:nth-child(5) {
+    animation-delay: 1s;
+  }
+  .kohi span:nth-child(6) {
+    animation-delay: 1.2s;
+  }
+  .kohi span:nth-child(7) {
+    animation-delay: 1.4s;
+  }
+  .kohi span:nth-child(8) {
+    animation-delay: 1.6s;
+  }
+  @keyframes slide {
+    0% {
+      text-shadow: none;
+    }
+    50% {
+      text-shadow: 1px 0px 4px #230ea6;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+
+}
+.show{
+  height: 100vh !important;
+}
+button{
+  font-size: 1rem !important;
+}
+// ==============>> pop_up End <<==============
